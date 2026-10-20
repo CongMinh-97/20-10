@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gửi Vợ Yêu 20/10</title>
+<title>Gửi Hoàng Uyên</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff8fab'/%3E%3Cstop offset='1' stop-color='%23c22a55'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M12 21s-7.5-4.6-10-9.3C.3 8.4 2.1 4.5 5.8 4.1 8.2 3.8 10.3 5 12 7c1.7-2 3.8-3.2 6.2-2.9 3.7.4 5.5 4.3 3.8 7.6C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E">
 <meta name="description" content="Lời chúc 20/10 chồng gửi tặng vợ yêu - người phụ nữ tuyệt vời nhất.">
 <meta name="theme-color" content="#e8456b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -221,22 +222,20 @@ section{position:relative;padding:96px 16px}
 .bubble .who{font-weight:600;color:var(--rose);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .bubble p{font-family:var(--script);font-size:1.45rem;color:var(--text);margin-top:4px;line-height:1.45}
 
-.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:14px;margin-top:64px}
-.bento figure{position:relative;overflow:hidden;border-radius:20px;box-shadow:var(--shadow-sm);cursor:zoom-in;background:var(--blush-2)}
-.bento figure img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
-.bento figure:hover img{transform:scale(1.08)}
+.bento{display:grid;gap:14px;margin-top:64px}
+.bento-col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.bento figure{position:relative;overflow:hidden;border-radius:20px;box-shadow:var(--shadow-sm);cursor:zoom-in;background:var(--blush-2);flex-basis:0;min-height:0}
+.bento figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.bento figure:hover img{transform:scale(1.06)}
 .bento figure::after{content:"♥";position:absolute;right:12px;top:10px;color:#fff;font-size:1.1rem;opacity:0;transform:scale(.4);transition:.35s;text-shadow:0 2px 6px rgba(0,0,0,.3)}
 .bento figure:hover::after{opacity:1;transform:scale(1)}
 .bento figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;color:#fff;font-size:.86rem;font-weight:500;
   background:linear-gradient(transparent,rgba(80,10,35,.65));transform:translateY(100%);transition:transform .4s ease}
 .bento figure:hover figcaption{transform:none}
-.bento .tall{grid-row:span 2}
-.bento .wide{grid-column:span 2}
-.bento .big{grid-column:span 2;grid-row:span 2}
 @media (max-width:760px){
-  .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:10px}
-  .bento .big{grid-column:span 2;grid-row:span 2}
-  .bento figcaption{transform:none;font-size:.78rem}
+  .bento,.bento-col{gap:10px}
+  .bento figure{border-radius:14px}
+  .bento figcaption{transform:none;font-size:.74rem;padding:22px 10px 8px}
 }
 
 /* ================= JOURNEY ================= */
@@ -337,7 +336,7 @@ section{position:relative;padding:96px 16px}
   background:linear-gradient(120deg,#e8456b,#ff8fab,#d6a15a,#e8456b);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
 .finale-msg p{max-width:600px;margin:16px auto 0;color:var(--muted);font-size:1.08rem}
 .finale-msg .final-photo{width:min(360px,80vw);margin:34px auto 0;border-radius:20px;overflow:hidden;border:8px solid var(--surface);box-shadow:var(--shadow);transform:rotate(2deg);cursor:zoom-in}
-.finale-msg .final-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 45%}
+.finale-msg .final-photo img{width:100%;aspect-ratio:3/4;object-fit:cover}
 .finale-msg .sig{font-family:var(--script);font-size:2rem;color:var(--rose-deep);margin-top:26px}
 #fx{position:fixed;inset:0;pointer-events:none;z-index:60}
 
@@ -519,40 +518,7 @@ footer .h{color:var(--rose);display:inline-block;animation:beat 1.2s infinite}
         </div>
       </div>
 
-      <div class="bento">
-        <figure class="big reveal" data-lb="assets/photos/family-tower.jpg" data-cap="Cả nhà mình – áo đỏ sao vàng">
-          <img src="assets/photos/family-tower.jpg" alt="Gia đình trước tháp cổ" loading="lazy" style="object-position:50% 70%">
-          <figcaption>Cả nhà mình, áo đỏ sao vàng 🇻🇳</figcaption>
-        </figure>
-        <figure class="tall reveal d1" data-lb="assets/photos/mom-daughter-garden.jpg" data-cap="Mẹ và con – bình yên">
-          <img src="assets/photos/mom-daughter-garden.jpg" alt="Mẹ và con gái trong khu vườn" loading="lazy" style="object-position:50% 55%">
-          <figcaption>Mẹ và con, bình yên lắm</figcaption>
-        </figure>
-        <figure class="tall reveal d2" data-lb="assets/photos/family-zoo.jpg" data-cap="Đồ đôi… à không, đồ ba!">
-          <img src="assets/photos/family-zoo.jpg" alt="Gia đình mặc áo hồng đồng phục" loading="lazy" style="object-position:50% 60%">
-          <figcaption>Đồ đôi… à không, đồ ba! 💗</figcaption>
-        </figure>
-        <figure class="wide reveal" data-lb="assets/photos/family-selfie.jpg" data-cap="Selfie cả nhà">
-          <img src="assets/photos/family-selfie.jpg" alt="Gia đình selfie" loading="lazy" style="object-position:50% 40%">
-          <figcaption>Selfie cả nhà 📸</figcaption>
-        </figure>
-        <figure class="tall reveal d1" data-lb="assets/photos/family-beach.jpg" data-cap="Những ngày hè rộn ràng tiếng cười">
-          <img src="assets/photos/family-beach.jpg" alt="Gia đình tắm biển" loading="lazy" style="object-position:50% 55%">
-          <figcaption>Hè rộn ràng tiếng cười 🌊</figcaption>
-        </figure>
-        <figure class="tall reveal d2" data-lb="assets/photos/family-tower-hug.jpg" data-cap="Ôm chặt những người anh thương">
-          <img src="assets/photos/family-tower-hug.jpg" alt="Cả nhà ôm nhau" loading="lazy" style="object-position:30% 60%">
-          <figcaption>Ôm chặt những người anh thương</figcaption>
-        </figure>
-        <figure class="wide reveal" data-lb="assets/photos/family-raft.jpg" data-cap="Những chuyến đi cùng con">
-          <img src="assets/photos/family-raft.jpg" alt="Gia đình trên bè" loading="lazy">
-          <figcaption>Những chuyến đi cùng con 🚣</figcaption>
-        </figure>
-        <figure class="wide reveal d1" data-lb="assets/photos/mom-daughter-dino.jpg" data-cap="Hai mẹ con điệu đà">
-          <img src="assets/photos/mom-daughter-dino.jpg" alt="Hai mẹ con" loading="lazy" style="object-position:50% 55%">
-          <figcaption>Hai mẹ con điệu đà ✌️</figcaption>
-        </figure>
-      </div>
+      <div class="bento" id="bento"></div>
     </div>
   </section>
 
@@ -649,7 +615,7 @@ footer .h{color:var(--rose);display:inline-block;animation:beat 1.2s infinite}
       <div class="finale-msg" id="finaleMsg">
         <h2>Anh yêu em!</h2>
         <p>Cảm ơn em vì đã là vợ của anh, là mẹ của con, là bạn đồng hành trên mọi nẻo đường. Chúc em một ngày 20/10 ngập tràn hoa, quà và thật nhiều nụ cười. Phần đời còn lại, mình cứ nắm tay nhau đi tiếp em nhé.</p>
-        <div class="final-photo" data-lb="assets/photos/couple-polaroid.jpg" data-cap="Mãi bên nhau em nhé"><img src="assets/photos/couple-polaroid.jpg" alt="Ảnh polaroid hai vợ chồng" loading="lazy"></div>
+        <div class="final-photo" data-lb="assets/photos/final-us.jpg" data-cap="Đồng đội ăn ý nhất – trên sân và cả cuộc đời"><img src="assets/photos/final-us.jpg" alt="Hai vợ chồng cầm cúp vô địch cầu lông" loading="lazy"></div>
         <div class="sig">Chồng của em 💍</div>
       </div>
     </div>
@@ -842,7 +808,7 @@ footer .h{color:var(--rose);display:inline-block;animation:beat 1.2s infinite}
     ['couple-flag', 'Nơi lá cờ tung bay'], ['couple-moto', 'Hai đứa, một xe'], ['couple-river', 'Dòng sông xanh ngắt'],
     ['couple-serpentine', 'Những khúc cua tình yêu'], ['couple-helmets', 'Ôm chặt anh nhé'], ['couple-valley-road', 'Đường xa có em'],
     ['couple-cafe', 'Cà phê cùng em'], ['couple-valley', 'Thung lũng bình yên'], ['couple-piggyback', 'Cõng em đi khắp thế gian'],
-    ['couple-helmets-2', 'Phượt thủ đáng yêu'], ['couple-boat', 'Lênh đênh cùng nhau'], ['couple-court', 'Cười lên nào']
+    ['couple-helmets-2', 'Phượt thủ đáng yêu'], ['couple-boat', 'Lênh đênh cùng nhau'], ['couple-court', 'Cười lên nào'], ['couple-polaroid', 'Mãi bên nhau em nhé']
   ];
   const track = $('#filmTrack');
   [...film, ...film].forEach(([f, cap], i) => {
@@ -852,6 +818,40 @@ footer .h{color:var(--rose);display:inline-block;animation:beat 1.2s infinite}
     fig.innerHTML = `<img src="assets/photos/${f}.jpg" alt="${cap}" loading="lazy">`;
     track.appendChild(fig);
   });
+
+  /* ---------- Family gallery: balanced columns ---------- */
+  const fam = [
+    ['family-tower', 'Cả nhà mình, áo đỏ sao vàng 🇻🇳', 1.333],
+    ['mom-daughter-garden', 'Mẹ và con, bình yên lắm', 1.333],
+    ['family-selfie', 'Selfie cả nhà 📸', .75],
+    ['family-zoo', 'Đồ đôi… à không, đồ ba! 💗', 1.333],
+    ['family-beach', 'Hè rộn ràng tiếng cười 🌊', 1.333],
+    ['family-raft', 'Những chuyến đi cùng con 🚣', .667],
+    ['mom-daughter-dino', 'Hai mẹ con điệu đà ✌️', 1.333],
+    ['family-tower-hug', 'Ôm chặt những người anh thương', 1.333],
+    ['family-zoo-wide', 'Đi chơi vườn thú cùng con 🦒', 1.333]
+  ];
+  const bento = $('#bento');
+  let bentoCols = 0;
+  function layoutBento() {
+    const n = innerWidth <= 760 ? 2 : 3;
+    if (n === bentoCols) return;
+    bentoCols = n;
+    const cols = Array.from({ length: n }, () => ({ el: document.createElement('div'), h: 0 }));
+    fam.forEach(([f, cap, r]) => {
+      const c = cols.reduce((a, b) => (b.h < a.h ? b : a));
+      const fig = document.createElement('figure');
+      fig.dataset.lb = `assets/photos/${f}.jpg`; fig.dataset.cap = cap;
+      fig.style.flexGrow = r;
+      fig.innerHTML = `<img src="assets/photos/${f}.jpg" alt="${cap}" loading="lazy"><figcaption>${cap}</figcaption>`;
+      c.el.appendChild(fig); c.h += r;
+    });
+    const avg = cols.reduce((s, c) => s + c.h, 0) / n;
+    bento.style.gridTemplateColumns = `repeat(${n},1fr)`;
+    bento.style.aspectRatio = `${n} / ${avg}`;
+    bento.replaceChildren(...cols.map(c => { c.el.className = 'bento-col'; return c.el; }));
+  }
+  layoutBento(); addEventListener('resize', layoutBento);
 
   /* ---------- Wishes ---------- */
   const wishes = [
